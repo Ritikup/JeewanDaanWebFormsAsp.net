@@ -1,0 +1,178 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="webproj2.Site1" %>
+
+ <!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <%-- bootstrap css--%>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+       <%-- datatables css--%>
+    <link href="datatables/css/jquery.dataTables.min.css" rel="stylesheet" />
+    <%-- fontawsome css--%>
+    <link href="fontawsome/css/all.css" rel="stylesheet" />
+
+           <%-- our custom css--%>
+    <link href="css/style.css" rel="stylesheet" />
+
+      <%-- bootstrap js--%>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <%-- datatables js--%>
+    <script src="datatables/js/jquery.dataTables.min.js"></script>
+
+       <%-- fontawsome js--%>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+
+   
+    <form id="form1" runat="server">
+        <div>
+            <nav class="navbar navbar-expand-lg navbar-light" style="background:#762b00;">
+           <a class="navbar-brand" href="#">  <img src="imgs/logo.jpg" width="30" height="30" />
+               JIWAAN DAAN
+           </a>   
+                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item active ">
+          <a class="nav-link active btn btn-secondary mx-2" aria-current="page" href="homepage.aspx">Home</a>
+        </li>
+       <div class="btn-group mx-2" >
+  <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+    About Us
+  </button>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="whoweeare.aspx">Who We Are</a></li>
+
+    <li><a class="dropdown-item" href="medicalTeam.aspx">Medical Team</a></li>
+    <li><a class="dropdown-item" href="OurMission.aspx">Our Mission</a></li>
+    <li><hr class="dropdown-divider"></li>
+      
+  </ul>
+
+</div>
+
+         
+             <div class="btn-group mx-2">
+  <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+    Services
+  </button>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="viewHospital.aspx">View Hospitals</a></li>
+
+    <li><a class="dropdown-item" href="ViewPharmacy.aspx">View Pharmacy</a></li>
+    <li><a class="dropdown-item" href="SatisfactionSurveyForm.aspx">Satisfaction Survey Form</a></li>
+    <li><hr class="dropdown-divider"></li>
+    <li><a class="dropdown-item" href="doctors.aspx">Doctor Time Table</a></li>
+  </ul>
+</div>
+
+            <li class="nav-item active ">
+          <a class="nav-link active btn btn-secondary mx-2" aria-current="page" href="Dashview.aspx">Resources</a>
+        </li>
+        
+      </ul>
+
+     
+
+        <ul class="navbar-nav mx-3">
+           
+             
+
+            <li class="nav-item active">
+
+                <asp:LinkButton class="btn btn-info nav-link mx-2" ID="LinkButton1" runat="server" OnClick="LinkButton1_Click" >
+                    User Login
+                </asp:LinkButton>
+               
+            </li>
+
+            <li class="nav-item active">
+
+                <asp:LinkButton class=" btn btn-info nav-link" ID="LinkButton2" runat="server" OnClick="LinkButton2_Click">
+                    Sign Up
+                </asp:LinkButton>
+               
+            </li>
+
+             <li class="nav-item active">
+
+                <asp:LinkButton class="nav-link" ID="LinkButton3" runat="server" Visible="False" OnClick="LinkButton3_Click">
+                    Logout
+                </asp:LinkButton>
+               
+            </li>
+            <li class="nav-item active">
+
+                <asp:LinkButton class="nav-link" ID="LinkButton4" runat="server" Visible="False">
+                    Hello User
+                </asp:LinkButton>
+               
+            </li>
+
+        </ul>
+     
+    </div>
+</nav>
+
+
+
+
+        </div>
+
+              <!-- Main content placeholder-->        
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+
+    </asp:ContentPlaceHolder>
+
+        </div>
+      
+                      <!-- Footer content placeholder-->     
+       <footer class="fixed-bottom">
+            <div id="footer1" class=" container-fluid">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                        <p>
+                            <asp:LinkButton class="footerlinks" ID="LinkButton6" runat="server" OnClick="LinkButton6_Click">Admin Login</asp:LinkButton>
+                            &nbsp;
+                            <asp:LinkButton class="footerlinks" ID="LinkButton11" runat="server" Visible="False" OnClick="LinkButton11_Click">User Management</asp:LinkButton>
+                            &nbsp;
+                            <asp:LinkButton class="footerlinks" ID="LinkButton12" runat="server" OnClick="LinkButton12_Click" Visible="False">Hospital Management</asp:LinkButton>
+                            &nbsp;
+                            <asp:LinkButton class="footerlinks" ID="LinkButton5" runat="server" Visible="False" OnClick="LinkButton5_Click1">Manage Pharmacy</asp:LinkButton>
+                            &nbsp;
+                            
+                             
+                        </p>
+
+                    </div>
+
+                </div>
+            </div>
+            <div id="footer2" class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                        <p style="color:whitesmoke">&copy All right Reversed. <a class="footerlinks" href="#" target="_blank">Meow Code</a></p>
+                    </div>
+                </div>
+            </div>
+
+        </footer>
+
+
+    </form>
+</body>
+     
+
+
+
+</html>
